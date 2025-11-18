@@ -1,0 +1,341 @@
+/* Estilos profesionales para Sistema Estudiantil - IES N° 2 Humahuaca */
+:root {
+    --azul-institucional: #1a4b8c;
+    --azul-ies: #2c5aa0;
+    --dorado-academico: #d4af37;
+    --verde-esperanza: #27ae60;
+    --gris-profesional: #34495e;
+    --blanco-puro: #ffffff32;
+    --gris-claro: #f8f9fa;
+    --gris-bordes: #e9ecef;
+    --naranja-energia: #e67e22;
+    --rojo-alerta: #e74c3c;
+}
+
+/* FONDO PROFESIONAL PARA INSTITUTO EDUCATIVO */
+body {
+    font-family: 'Segoe UI', 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* ENCABEZADO INSTITUCIONAL - MENÚ CORREGIDO */
+.navbar {
+    background: linear-gradient(135deg, var(--azul-institucional), var(--azul-ies)) !important;
+    box-shadow: 0 2px 15px rgba(26, 75, 140, 0.3);
+    border-bottom: 4px solid var(--dorado-academico);
+    padding: 0.8rem 0;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: white !important;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    letter-spacing: 0.5px;
+}
+
+.navbar-brand i {
+    color: var(--dorado-academico);
+    margin-right: 8px;
+}
+
+/* MENÚ DE NAVEGACIÓN - CORREGIDO PARA BUEN CONTRASTE */
+.navbar-nav {
+    background: transparent !important;
+}
+
+.navbar-nav .nav-item {
+    margin: 0 2px;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    margin: 0 2px;
+    color: white !important;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    background: transparent !important;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+}
+
+.navbar-nav .nav-link:hover {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.3), rgba(212, 175, 55, 0.1)) !important;
+    transform: translateY(-2px);
+    color: white !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.navbar-nav .nav-link.active {
+    background: linear-gradient(135deg, var(--dorado-academico), #e6c158) !important;
+    color: var(--azul-institucional) !important;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+    text-shadow: none;
+}
+
+/* ESTILOS ESPECÍFICOS PARA ACCESOS - COLOR AZUL */
+.navbar-nav .nav-link[href*="administrativo"],
+.navbar-nav .nav-link[href*="admin"],
+.navbar-nav .nav-link[href*="estudiantes"],
+.navbar-nav .nav-link[href*="estudiante"],
+.navbar-nav .nav-link[href*="acceso"],
+.navbar-nav .nav-link:contains("Administrativo"),
+.navbar-nav .nav-link:contains("Estudiantes"),
+.navbar-nav .nav-link:contains("Acceso") {
+    color: var(--azul-institucional) !important;
+    background: linear-gradient(135deg, var(--blanco-puro), #e3f2fd) !important;
+    border: 2px solid var(--azul-ies);
+    font-weight: 700;
+    text-shadow: none;
+}
+
+.navbar-nav .nav-link[href*="administrativo"]:hover,
+.navbar-nav .nav-link[href*="admin"]:hover,
+.navbar-nav .nav-link[href*="estudiantes"]:hover,
+.navbar-nav .nav-link[href*="estudiante"]:hover,
+.navbar-nav .nav-link[href*="acceso"]:hover,
+.navbar-nav .nav-link:contains("Administrativo"):hover,
+.navbar-nav .nav-link:contains("Estudiantes"):hover,
+.navbar-nav .nav-link:contains("Acceso"):hover {
+    background: linear-gradient(135deg, var(--azul-ies), var(--azul-institucional)) !important;
+    color: white !important;
+    border-color: var(--dorado-academico);
+    transform: translateY(-2px);
+}
+
+/* Si necesitas una clase específica para los accesos */
+.acceso-administrativo,
+.acceso-estudiantes {
+    color: var(--azul-institucional) !important;
+    background: linear-gradient(135deg, var(--blanco-puro), #e3f2fd) !important;
+    border: 2px solid var(--azul-ies);
+    font-weight: 700;
+    text-shadow: none;
+}
+
+.acceso-administrativo:hover,
+.acceso-estudiantes:hover {
+    background: linear-gradient(135deg, var(--azul-ies), var(--azul-institucional)) !important;
+    color: white !important;
+    border-color: var(--dorado-academico);
+}
+
+/* Dropdown menu corregido */
+.navbar-nav .dropdown-menu {
+    background: linear-gradient(135deg, var(--blanco-puro), var(--gris-claro)) !important;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    border-top: 3px solid var(--dorado-academico);
+}
+
+.navbar-nav .dropdown-item {
+    color: var(--gris-profesional) !important;
+    font-weight: 500;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .dropdown-item:hover {
+    background: linear-gradient(135deg, var(--azul-ies), var(--azul-institucional)) !important;
+    color: white !important;
+    transform: translateX(5px);
+}
+
+/* CONTENEDOR PRINCIPAL ELEGANTE */
+.container {
+    background: var(--blanco-puro);
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    margin-bottom: 30px;
+    border: 1px solid var(--gris-bordes);
+    position: relative;
+    overflow: hidden;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--azul-institucional), var(--dorado-academico));
+}
+
+/* PIE DE PÁGINA INSTITUCIONAL */
+footer {
+    background: linear-gradient(135deg, var(--gris-profesional), #2c3e50) !important;
+    color: white;
+    margin-top: 50px;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 -2px 15px rgba(52, 73, 94, 0.3);
+    border-top: 4px solid var(--dorado-academico);
+    padding: 30px 0;
+}
+
+footer h5 {
+    color: var(--dorado-academico);
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+footer p {
+    margin-bottom: 8px;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+/* BOTONES INSTITUCIONALES */
+.btn {
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--azul-ies), var(--azul-institucional));
+    border: none;
+}
+
+.btn-success {
+    background: linear-gradient(135deg, var(--verde-esperanza), #229954);
+    border: none;
+}
+
+.btn-warning {
+    background: linear-gradient(135deg, var(--naranja-energia), #e67e22);
+    border: none;
+    color: white;
+}
+
+.btn-info {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    border: none;
+}
+
+.btn-outline-primary {
+    border: 2px solid var(--azul-ies);
+    color: var(--azul-ies);
+    background: transparent;
+}
+
+.btn-outline-primary:hover {
+    background: var(--azul-ies);
+    color: white;
+}
+
+/* RESPONSIVE DESIGN MEJORADO */
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        padding: 20px;
+    }
+    
+    .navbar-brand {
+        font-size: 1.3rem;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 12px 15px;
+        margin: 2px 0;
+        text-align: center;
+    }
+    
+    /* Ajustes específicos para accesos en móviles */
+    .navbar-nav .nav-link[href*="administrativo"],
+    .navbar-nav .nav-link[href*="admin"],
+    .navbar-nav .nav-link[href*="estudiantes"],
+    .navbar-nav .nav-link[href*="estudiante"],
+    .navbar-nav .nav-link[href*="acceso"] {
+        margin: 5px 0;
+        font-size: 0.9rem;
+    }
+    
+    .btn-group {
+        flex-direction: column;
+    }
+    
+    .btn-group .btn {
+        margin: 3px 0;
+        border-radius: 6px;
+    }
+    
+    #contenedor-mensajes {
+        left: 10px;
+        right: 10px;
+        min-width: auto;
+    }
+    
+    .table-responsive {
+        font-size: 0.9rem;
+    }
+    
+    .card-header {
+        padding: 12px 15px;
+        font-size: 1rem;
+    }
+}
+
+/* Si necesitas aplicar estilos específicos por ID o clase */
+#acceso-administrativo,
+#acceso-estudiantes,
+.acceso-especial {
+    color: var(--azul-institucional) !important;
+    background: linear-gradient(135deg, var(--blanco-puro), #e3f2fd) !important;
+    border: 2px solid var(--azul-ies);
+    font-weight: 700;
+    text-shadow: none;
+}
+
+#acceso-administrativo:hover,
+#acceso-estudiantes:hover,
+.acceso-especial:hover {
+    background: linear-gradient(135deg, var(--azul-ies), var(--azul-institucional)) !important;
+    color: white !important;
+    border-color: var(--dorado-academico);
+}
+.hidden {
+    display: none !important;
+}
+
+
+
+/* Estilos para el logo en la barra de navegación */
+.navbar-brand img {
+    height: 80px !important; /* Más grande que los 40px originales */
+    border-radius: 5px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+/* Efecto hover opcional */
+.navbar-brand img:hover {
+    transform: scale(1.05);
+}
+
+.logo-circular {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Esto crea la forma circular */
+    object-fit: cover; /* Esto asegura que la imagen cubra el área sin distorsionarse */
+}
